@@ -1,0 +1,163 @@
+/* Reset básico */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1a1625;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Container geral */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Texto de boas-vindas */
+.texto h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #1410df;
+  margin-bottom: 30px;
+}
+
+/* Ilustração com animação flutuante */
+.ilustra {
+  width: 350px;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Caixa de login */
+.login-box {
+  background: linear-gradient(to bottom right, #2a223a, #1e1b29);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  width: 280px;
+  text-align: center;
+}
+
+/* Título do login */
+.login-box h3 {
+  color: #1444ac;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+
+
+/* Labels */
+.login-box label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Campos de entrada */
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  background-color: #39314e;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Botão de login */
+.login-box button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #1444ac;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 2px;
+}
+
+.login-box button:hover {
+  background-color: #0e3194;
+}
+
+/* Link estilo botão - Criar conta */
+.btn-criar-conta {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 2px solid #1444ac;
+  border-radius: 8px;
+  color: #1444ac;
+  background-color: transparent;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.btn-criar-conta:hover {
+  background-color: #1444ac;
+  color: white;
+}
+
+  /* Link estilo botão - Modo Visitante  */
+  .btn-modo-visit {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 2px solid #1444ac;
+    border-radius: 8px;
+    color: #a1a4aa;
+    background-color: transparent;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+    z-index: 1000;
+  }
+  .btn-top-visitante:hover {
+    background-color: #0e3194;
+  }
+  .ilustra02 {
+      display: block;
+      margin: 20px auto;
+      width: 150px;
+      height: auto;
+  }
+  a {
+    color: #1444ac;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .erro {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 4px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    text-align: center;
+}

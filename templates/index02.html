@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia TeceGym - Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style02.css') }}">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<body>
+  <a href="{{ url_for('visitante') }}" class="btn-modo-visit">Modo Visitante 👁</a>
+  <div class="container">
+    <div class="texto">
+      <h2>Bem-vindo(a) à academia TeceGym! </h2>
+      <img src="{{ url_for('static', filename='img/treinogym.svg.svg') }}" alt="Ilustração academia" class="ilustra">
+    </div>
+
+    <div class="login-box">
+      <h2>LOGIN</h2>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="erro">
+            {% for message in messages %}
+              <p>{{ message }}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+      <form action="/api/login" method="post">
+        <label for="email">E-mail</label>
+        <input type="text" id="email" name="email" placeholder="E-mail">
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Password">
+
+        <button type="submit">LOGIN</button><br><br>
+      </form>
+
+      <p>⬇ Caso não tenha conta ⬇</p>
+      <a href="{{ url_for('cadastro_form') }}" class="btn-criar-conta">Crie uma conta</a> 
+    </div>
+  </div>
+</body>
+</html>

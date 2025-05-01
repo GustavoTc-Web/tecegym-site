@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>TeceGym - Página Inicial</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style-inicial.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h3>🏋️ Bem-vindo(a) ao site da academia TeceGym, {{ nome }}!</h3>
+      <p>Aqui começa sua jornada rumo à melhor versão de você mesmo.</p>
+      <hr><br>
+      <img src="{{ url_for('static', filename='img/treino01.svg.svg') }}" alt="Ilustração academia" class="ilustra02">
+      <h3>O que deseja fazer?</h3>
+      <div calss = "login-box">
+      <ul> 
+        <li><p><a href = "/plano">Visualizar planos de treino.</a></p></li>
+        <li><p><a href = "/horarios">Consultar horários disponíveis.</a></p></li>
+        <li><p><a href = "/aulas">Marcar aulas online.</a></p></li>
+        <li><p><a href = "/dieta">Começar uma dieta</a></p></li>
+        <li><p><a href = "/personal">Fechar com um personal</a></p></li>
+        <li><p><a href = "/evolução">Histórico de evolução</a></p></li>
+      </ul>
+      </div>
+      <br>
+      <a href="{{ url_for('login_page') }}">
+        <button type="button">Sair</button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

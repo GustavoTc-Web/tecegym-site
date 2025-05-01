@@ -1,0 +1,135 @@
+/* Fundo geral da página */
+body {
+    margin: 0;
+    padding: 40px; /* espaço interno */
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1a1625; /* fundo escuro roxo */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* altura mínima para preencher tela */
+  }
+  
+  /* Container principal centralizado */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #2a223a, #1e1b29); /* fundo degradê suave */
+    padding: 50px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* sombra ao redor */
+    max-width: 700px;
+    width: 100%;
+  }
+  
+  /* Título de boas-vindas */
+  .texto h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #1410df; /* azul violeta forte */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Subtítulo */
+  .texto h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  /* Lista de opções (sem marcadores) */
+  .texto ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Cada item da lista */
+  .texto ul li {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  /* Estilo dos links */
+  .texto a {
+    color: #1444ac; /* azul escuro */
+    font-weight: bold;
+    text-decoration: underline;
+    transition: 0.3s;
+  }
+  
+  /* Hover nos links */
+  .texto a:hover {
+    color: #0e3194;
+  }
+  
+  /* Botão voltar para login */
+  .btn-criar-conta {
+    display: block;
+    margin: 20px auto;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 2px solid #1444ac;
+    border-radius: 8px;
+    color: #1444ac;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+  }
+  
+  /* Hover no botão */
+  .btn-criar-conta:hover {
+    background-color: #1444ac;
+    color: white;
+  }
+  
+  /* Imagem do visitante */
+  .ilustra02 {
+    display: block;
+    margin: 25px auto;
+    width: 160px;
+    height: auto;
+    animation: flutuar 3s ease-in-out infinite; /* animação leve */
+  }
+  
+  /* Animação flutuar */
+  @keyframes flutuar {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  
+  /* Parágrafos abaixo da lista */
+  .container p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .vantagens {
+    margin-top: 20px;
+    background-color: #2a223a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    color: #ccc;
+    max-width: 400px;
+  }
+  
+  .vantagens ul {
+    list-style-type: '✨ ';
+    padding-left: 20px;
+  }
+  
+  .vantagens li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  

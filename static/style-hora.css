@@ -1,0 +1,76 @@
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.horarios {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.horarios h1 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #00BFFF; /* Azul bonito */
+}
+
+.semana {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+    color: #ffffff;
+}
+
+.dia {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer; /* Cursor de mão */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dia:hover {
+    background-color: #292929; /* Troca de cor no hover */
+}
+
+.dia p {
+    font-size: 1.2em;
+    margin: 0;
+    color: #f0f0f0; /* Cor inicial do horário */
+    transition: color 0.3s ease; /* Suaviza a cor */
+}
+
+.dia p:hover {
+    color: #00BFFF; /* Mudando a cor do horário para azul no hover */
+}
+
+.dia h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease; /* Transição suave no nome do dia */
+}
+
+.dia:hover h2 {
+    color: #00BFFF; /* Muda para azul no hover */
+}
+
+
+p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Dia em destaque */
+.destaque {
+    border: 2px solid #00BFFF;
+    background-color: #0a0a0a;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia TeceGym - Visitante</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style-visitante.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="texto">
+      <h2>Bem vindo(a), Visitante! 💪</h2>
+      <img src="{{ url_for('static', filename='img/com-imagem.gif.gif') }}" alt="Ilustração academia" class="ilustra02">
+      <h3>No modo visitante o nosso site fica um pouco mais limitado, porém ainda há algumas taferas que possamos fazer! Para explorar mais os recursos da nossa academia, faça o Login. </h3><br>
+      <p>O que deseja fazer?</p>
+      <ul style="text-align: left;">
+        <li><p><a href = "/planlimit">Visualizar planos de treino(Limitado)</a></p></li>
+        <li><p><a href = "/horarios">Consultar horários disponíveis</a></p></li>
+      </ul>
+      <a href="{{ url_for('login_page') }}" class="btn-criar-conta">Voltar para o Login</a> 
+      <p><a href = "#" id = "vantagens-link">Quais são as vantagens de fazer o Login?</a></p>
+      <div id="vantagens-box" class="vantagens" style="display: none;">
+        <ul>
+            <li> Acesso completo aos planos de treino.</li>
+            <li> Personal Trainer exclusivo.</li>
+            <li> Histórico de evolução.</li>
+            <li> Acesso a treinos exclusivos.</li>
+            <li> Acesso à uma dieta regrada.</li>
+            <li> Marcação de aulas online.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    const link = document.getElementById("vantagens-link");
+    const box = document.getElementById("vantagens-box");
+  
+    link.addEventListener("click", function(e) {
+      e.preventDefault(); // Evita que a página suba ao clicar
+      box.style.display = (box.style.display === "none") ? "block" : "none";
+    });
+  </script>  
+</body>
+</html>

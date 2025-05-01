@@ -1,0 +1,68 @@
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.dieta {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dieta h1 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #00BFFF;
+}
+
+.plano {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.refeicao {
+    flex: 1 1 200px;
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.refeicao:hover {
+    background-color: #00BFFF;
+    color: #121212;
+}
+
+.refeicao h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.refeicao p {
+    font-size: 1.1em;
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #00BFFF;
+    color: #121212;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #009acd;
+}

@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1a1625;
+    color: white;
+  }
+  
+  .container-planos {
+    display: flex;
+    flex-wrap: wrap; /* permite quebrar linha */
+    gap: 30px; 
+    justify-content: center;
+    padding: 20px;
+    width: 100%; /* Garante que a div ocupe toda a largura */
+  }
+  
+  h2 {
+    text-align: center;
+    color: #1444ac;
+    margin: 0 0 30px 0; /* Remove a margem superior e ajusta a inferior */
+    width: 100%; /* Garante que o título ocupe toda a largura disponível */
+  }
+  
+  .card {
+    flex: 1 1 calc(50% - 40px); /* ocupa 50% menos o gap, permite quebrar */
+    background-color: #1c1c2e;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    max-width: 400px; /* limita o tamanho máximo do card */
+  }
+  
+  .card h3 {
+    color: #00bfff;
+    margin-bottom: 10px;
+  }
+  
+  .card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .card li {
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: #00bfff;
+    font-size: 2rem;
+  }
+  
