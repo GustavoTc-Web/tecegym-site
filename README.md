@@ -31,4 +31,5 @@ TeceGym é uma plataforma online para gerenciar e exibir planos de treino, com r
 
 ### Prévia do site 
 
-1. Imagem da Página Inicial(imagens/home-print)
+![Página Inicial](static/img/home-print.png)
+
