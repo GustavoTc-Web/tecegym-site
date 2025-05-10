@@ -11,7 +11,7 @@ TeceGym é uma plataforma online para gerenciar e exibir planos de treino, com r
 
 ## Tecnologias Usadas
 
-- **Frontend:** HTML, CSS (com animações SVG)
+- **Frontend:** HTML, CSS (com animações SVG/GIF)
 - **Backend:** Python (Flask)
 - **Banco de dados:** MySQL
 
@@ -29,7 +29,13 @@ TeceGym é uma plataforma online para gerenciar e exibir planos de treino, com r
    ```bash
    git clone https://github.com/GustavoTc-Web/tecegym-site.git
 
-### Prévia do site 
+## Prévia do site
+
+### Página Inicial
 
 ![Página Inicial](static/img/home-print.png)
+
+![Página Personal](static/img/pagpersonal-print.png)
+
+
 

@@ -60,11 +60,74 @@ def login():
     con.close()
 
     if user:
+        session['user_id'] = user['id']
         session['user'] = user['nome']
         return redirect('/pagina-inicial')
     else:
         flash('E-mail ou senha incorretos. Tente novamente.')
         return redirect('/index02')
+
+
+
+@app.route('/evolução', methods=['POST', 'GET'])
+def evolucao():
+    if 'user_id' not in session:
+        return redirect('/index02')
+    
+    if request.method == 'POST':
+
+        peso = float(request.form['peso'])
+        altura = float(request.form['altura'])
+        gordura = float(request.form['gordura'])
+        data_registro = request.form['data_registro']
+        id_user = session['user_id']
+
+        con = mysql.connector.connect(**db_config)
+        cursor = con.cursor()
+        sql = """
+            INSERT INTO evolucao (id_usuario, peso, altura, gordura_corporal, data_registro)
+            VALUES (%s, %s, %s, %s, %s)
+        """
+        cursor.execute(sql, (id_user, peso, altura, gordura, data_registro))
+        con.commit()
+        cursor.close()
+        con.close()
+
+        return redirect('/evolução')
+
+    con = mysql.connector.connect(**db_config)
+    cursor = con.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM evolucao WHERE id_usuario = %s", (session['user_id'],))
+    evolucao_data = cursor.fetchall()
+    cursor.close()
+    con.close()
+
+    return render_template('evolução.html', evolucao=evolucao_data)
+    
+
+
+@app.route('/perfil')
+def perfil():
+    if 'user_id' not in session:
+        return redirect('/index02')
+    con = mysql.connector.connect(**db_config)
+    cursor = con.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM cadastro WHERE id = %s", (session['user_id'],))
+    user_data = cursor.fetchone()
+    cursor.execute("""
+        SELECT * FROM evolucao 
+        WHERE id_usuario = %s 
+        ORDER BY data_registro DESC 
+        LIMIT 1
+    """, (session['user_id'],))
+    ultima_evolucao = cursor.fetchone()
+
+    cursor.close()
+    con.close()
+
+    return render_template('perfil.html', user=user_data, evolucao=ultima_evolucao)
+
+
 
 @app.route('/pagina-inicial')
 def homepag_inicial():
@@ -105,6 +168,18 @@ def pag_emagrecer():
 @app.route('/objetivos')
 def escolher_objetivo():
     return render_template('objetivo.html')
+
+@app.route('/personal')
+def personal():
+    return render_template('personal.html')
+
+@app.route('/evolução')
+def historico_evolução():
+    return render_template('evolução.html')
+
+@app.route('/planlimit')
+def plano_limitado():
+    return render_template('planlimit.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

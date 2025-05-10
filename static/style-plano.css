@@ -50,4 +50,32 @@ body {
     color: #00bfff;
     font-size: 2rem;
   }
-  
+
+  .plano-limite {
+    text-align: center;
+    color:#1444ac;
+  }
+
+  .fala-planos {
+    text-align: center;
+    color: #00bfff;
+    margin: 0 0 30px 0; 
+    width: 100%; 
+  }
+
+  .btn-criar-conta {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 2px solid #1444ac;
+    border-radius: 8px;
+    color: #1444ac;
+    background-color: transparent;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+  }
+
+  .btn-criar-conta:hover {
+    background-color: #00bfff;
+  }

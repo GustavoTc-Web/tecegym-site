@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .personal-card {
+    display: flex;
+    background-color: #1f1f1f;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .personal-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .personal-img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .personal-info {
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .contact-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s;
+  }
+  
+  .contact-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .btn-sair{
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #1444ac;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+  }
+  
+  .btn-sair :hover {
+    background-color: #0e3194;
+  }
+
+
+  

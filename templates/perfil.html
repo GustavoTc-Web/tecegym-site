@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-perfil.css') }}">
+</head>
+<body>
+    <div class = "container">
+    <h1>Bem vindo, {{ user['nome'] }}</h1>
+
+    <div class="info-box">
+        <h2>Seus dados</h2>
+        <p><strong>Nome:</strong> {{ user['nome'] }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+    </div>
+
+    {% if evolucao %}
+        <div class="info-box">
+            <h2>Último Registro de Evolução</h2>
+            <p><strong>Peso:</strong> {{ evolucao.peso }} kg</p>
+            <p><strong>Altura:</strong> {{ evolucao.altura}} cm</p>
+            <p><strong>Gordura Corporal:</strong> {{ evolucao.gordura }}%</p>
+            <p><strong>Data:</strong> {{ evolucao.data_registro }}</p>
+        </div>
+        {% else %}
+        <div class="info-box">
+            <p>Você ainda não registrou nenhuma evolução.</p>
+        </div>
+        {% endif %}
+        <a class="btn-voltar" href="/pagina-inicial">Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>

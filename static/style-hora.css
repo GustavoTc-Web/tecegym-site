@@ -74,3 +74,17 @@ p {
     border: 2px solid #00BFFF;
     background-color: #0a0a0a;
 }
+
+.marcar-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #1444ac;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}

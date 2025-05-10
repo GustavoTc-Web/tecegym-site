@@ -99,4 +99,32 @@ body {
     background-color: #0e3194;
   }
 
+  .perfil-container {
+    position: absolute; /* ou fixed, dependendo do comportamento desejado */
+    top: 20px;
+    right: 20px;
+    background-color: #1c1c1e; /* fundo escuro */
+    border-radius: 12px;
+    padding: 15px;
+    width: 160px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4); /* azul brilhando */
+  }
+  
+  .foto-perfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .nome-usuario {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+
 

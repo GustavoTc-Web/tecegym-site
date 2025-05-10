@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Evolução do Usuário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-evolução.css') }}">
+</head>
+<body>
+    <h1>Histórico de Evolução</h1>
+    
+    <form method="POST">
+        <label for="peso">Peso:</label>
+        <input type="number" name="peso" step="0.01" required><br>
+
+        <label for="altura">Altura:</label>
+        <input type="number" name="altura" step="0.01"required><br>
+
+        <label for="gordura">Gordura Corporal (Número inteiro):</label>
+        <input type="number" name="gordura" step="0.01" required><br>
+
+        <label for="data_registro">Data de Registro:</label>
+        <input type="date" name="data_registro" required><br>
+
+        <button type="submit">Registrar Evolução</button>
+    </form>
+
+    <h2>Histórico</h2>
+    <table>
+        <tr>
+            <th>Peso</th>
+            <th>Altura</th>
+            <th>Gordura Corporal</th>
+            <th>Data</th>
+        </tr>
+        {% for item in evolucao %}
+        <tr>
+            <td>{{ item['peso'] }}</td>
+            <td>{{ item['altura'] }}</td>
+            <td>{{ item['gordura_corporal'] }}</td>
+            <td>{{ item['data_registro'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

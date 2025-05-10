@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style-inicial.css') }}">
 </head>
 <body>
+  <div class="perfil-container">
+    <img src="caminho-da-foto.jpg" alt="Foto de perfil" class="foto-perfil">
+    <p class="nome-usuario">{{ nome }}</p>
+    <a href="/perfil">Meu Perfil</a>
+  </div>  
   <div class="container">
     <div class="login-box">
       <h3>🏋️ Bem-vindo(a) ao site da academia TeceGym, {{ nome }}!</h3>
@@ -28,6 +33,7 @@
         <button type="button">Sair</button>
       </a>
     </div>
+  </div>
   </div>
 </body>
 </html>

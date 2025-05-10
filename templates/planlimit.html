@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>TeceGym - Plano de Treinos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style-plano.css') }}">
+</head>
+<body>
+    <div class="container-planos">
+      <h2>🏋️ Planos de treino</h2>
+
+      <p>Aqui temos os melhores exercícios para os músculos específicos</p>
+
+    <div class ="card">
+        <h3>Costas</h3>
+        <ul>
+            <li>Remada baixa</li>
+            <li>Puxada alta</li>
+            <li>Pulldown</li>
+        </ul>
+    </div>
+
+        <div class = "card">
+            <h3>Posterior</h3>
+            <ul>
+                <li>Cadeira flexora</li>
+                <li>Mesa flexora</li>
+                <li>Stiff</li>
+            </ul>
+        </div>
+
+        <div class ="card">
+            <h3>Triceps</h3>
+            <ul>
+                <li>Triceps barraV</li>
+                <li>Francês</li>
+                <li>Triceps testa</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <p class="fala-planos">Para ter acesso aos demais treinos → <a href="{{ url_for('cadastro_form') }}" class="btn-criar-conta">Cadastre-se</a></p>
+</body>
+</html>
