@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Trocar Senha - TeceGym</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-trocarsenha.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Trocar Senha</h2>
+        <form action="/trocar-senha" method="POST">
+            <label>Senha atual:</label>
+            <input type="password" name="senha_atual" required>
+
+            <label>Nova senha:</label>
+            <input type="password" name="nova_senha" required>
+
+            <label>Confirmar nova senha:</label>
+            <input type="password" name="confirmar_senha" required>
+
+            <button type="submit">Atualizar Senha</button>
+        </form>
+
+        <a class="btn-voltar" href="/perfil">Voltar</a>
+    </div>
+</body>
+</html>

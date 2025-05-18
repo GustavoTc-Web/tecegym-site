@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Evolução do Usuário</title>
+    <title>TeceGym - Sua Evolução</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style-evolução.css') }}">
 </head>
 <body>
@@ -31,6 +31,7 @@
             <th>Altura</th>
             <th>Gordura Corporal</th>
             <th>Data</th>
+            <th>Ações</th>
         </tr>
         {% for item in evolucao %}
         <tr>
@@ -38,6 +39,11 @@
             <td>{{ item['altura'] }}</td>
             <td>{{ item['gordura_corporal'] }}</td>
             <td>{{ item['data_registro'] }}</td>
+            <td>
+                <form action="{{ url_for('deletar_evolucao', id=item['id_evolucao']) }}" method="POST" style="display:inline;">
+                    <button type="submit" onclick="return confirm('Deseja realmente excluir este registro?')" class="delete-btn">Excluir</button>
+                </form>
+            </td>
         </tr>
         {% endfor %}
     </table>

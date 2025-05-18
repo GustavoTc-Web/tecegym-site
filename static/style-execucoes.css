@@ -1,0 +1,93 @@
+/* GERAL */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1d1d1f;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #3498db;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+p {
+    text-align: center;
+    font-size: 1em;
+    color: #bdc3c7;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+/* HEADER */
+header {
+    background-color: #34495e;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* SEÇÕES DE EXERCÍCIOS */
+.exercicio {
+    background-color: #1e2a36;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exercicio h2 {
+    color: #3498db;
+    font-size: 2em;
+}
+
+.exercicio p {
+    font-size: 1.1em;
+    color: #ecf0f1;
+    margin-top: 10px;
+}
+
+.exercicio img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .exercicio {
+        margin: 20px 5%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+.exercicio .descricao {
+    font-size: 0.95rem; 
+    color: #ccc; 
+    margin-bottom: 1rem;
+  }
+  

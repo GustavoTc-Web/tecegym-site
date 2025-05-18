@@ -9,7 +9,7 @@
     <div class="container-planos">
       <h2>🏋️ Planos de treino</h2>
 
-      <p>Aqui temos os melhores exercícios para os músculos específicos</p>
+      <p class="fala-planos">Os melhores exercícios, divididos por grupo muscular, prontos para você alcançar seus objetivos!</p>
 
     <div class ="card">
         <h3>Costas</h3>
@@ -17,6 +17,9 @@
             <li>Remada baixa</li>
             <li>Puxada alta</li>
             <li>Pulldown</li>
+            <div class="ver-execucoes-container">
+                <a href="/execucoes/costas" class="btn-ver-execucoes">Ver execuções</a>
+              </div> 
         </ul>
     </div>
 
@@ -26,6 +29,9 @@
                 <li>Cadeira flexora</li>
                 <li>Mesa flexora</li>
                 <li>Stiff</li>
+                <div class="ver-execucoes-container">
+                    <a href="/execucoes/posterior" class="btn-ver-execucoes">Ver execuções</a>
+                  </div> 
             </ul>
         </div>
 
@@ -35,10 +41,13 @@
                 <li>Triceps barraV</li>
                 <li>Francês</li>
                 <li>Triceps testa</li>
+                <div class="ver-execucoes-container">
+                    <a href="/execucoes/triceps" class="btn-ver-execucoes">Ver execuções</a>
+                  </div> 
             </ul>
         </div>
     </div>
   </div>
-  <p class="fala-planos">Para ter acesso aos demais treinos → <a href="{{ url_for('cadastro_form') }}" class="btn-criar-conta">Cadastre-se</a></p>
+  <p>Para ter acesso aos demais treinos → <a href="{{ url_for('cadastro_form') }}" class="btn-criar-conta">Cadastre-se</a></p>
 </body>
 </html>

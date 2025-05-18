@@ -78,7 +78,7 @@ def evolucao():
 
         peso = float(request.form['peso'])
         altura = float(request.form['altura'])
-        gordura = float(request.form['gordura'])
+        gordura_corporal = float(request.form['gordura_corporal'])
         data_registro = request.form['data_registro']
         id_user = session['user_id']
 
@@ -88,7 +88,7 @@ def evolucao():
             INSERT INTO evolucao (id_usuario, peso, altura, gordura_corporal, data_registro)
             VALUES (%s, %s, %s, %s, %s)
         """
-        cursor.execute(sql, (id_user, peso, altura, gordura, data_registro))
+        cursor.execute(sql, (id_user, peso, altura, gordura_corporal, data_registro))
         con.commit()
         cursor.close()
         con.close()
@@ -103,7 +103,30 @@ def evolucao():
     con.close()
 
     return render_template('evolução.html', evolucao=evolucao_data)
-    
+
+
+
+@app.route('/api/evolucao/delete/<int:id>', methods=['POST'])
+def deletar_evolucao(id):
+    if 'user_id' not in session:
+        return redirect('/index02')
+
+    con = mysql.connector.connect(**db_config)
+    cursor = con.cursor()
+    sql = "DELETE FROM evolucao WHERE id_evolucao = %s AND id_usuario = %s"
+    cursor.execute(sql, (id, session['user_id']))
+    con.commit()
+    cursor.close()
+    con.close()
+
+    flash('Registro de evolução excluído com sucesso.')
+    return redirect('/evolução')
+
+
+
+@app.route('/execucoes/<grupo>')
+def pags_execucoes(grupo):
+    return render_template(f'execucoes.html', grupo = grupo)
 
 
 @app.route('/perfil')
@@ -126,6 +149,45 @@ def perfil():
     con.close()
 
     return render_template('perfil.html', user=user_data, evolucao=ultima_evolucao)
+
+
+
+
+@app.route('/trocar-senha', methods=['GET', 'POST'])
+def trocar_senha():
+    if "user_id" not in session:
+        return redirect("/index02")  
+
+    usuario_id = session["user_id"]
+
+    if request.method == "POST":
+        senha_atual = request.form["senha_atual"]
+        nova_senha = request.form["nova_senha"]
+        confirmar_senha = request.form["confirmar_senha"]
+
+        con = mysql.connector.connect(**db_config)
+        cursor = con.cursor()
+        cursor.execute("SELECT senha FROM cadastro WHERE id = %s", (usuario_id,))
+        senha_banco = cursor.fetchone()[0]
+
+        if senha_atual != senha_banco:
+            cursor.close()
+            con.close()
+            return "Senha atual incorreta."
+
+        if nova_senha != confirmar_senha:
+            cursor.close()
+            con.close()
+            return "A nova senha e a confirmação não coincidem."
+
+        cursor.execute("UPDATE cadastro SET senha = %s WHERE id = %s", (nova_senha, usuario_id))
+        con.commit()
+        cursor.close()
+        con.close()
+
+        return redirect('/perfil')
+
+    return render_template('trocar-senha.html')
 
 
 
@@ -172,10 +234,6 @@ def escolher_objetivo():
 @app.route('/personal')
 def personal():
     return render_template('personal.html')
-
-@app.route('/evolução')
-def historico_evolução():
-    return render_template('evolução.html')
 
 @app.route('/planlimit')
 def plano_limitado():

@@ -48,3 +48,19 @@ p {
 .btn-voltar:hover {
     background-color: #008fd1;
 }
+
+.troca-senha {
+    background-color: #007bff;  
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1000;     
+}
+
+.troca-senha:hover {
+    background-color: rgb(0, 68, 255);
+}

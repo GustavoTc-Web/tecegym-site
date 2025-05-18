@@ -66,12 +66,12 @@ body {
   .btn-criar-conta {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: 2px solid #1444ac;
     border-radius: 8px;
-    color: #1444ac;
+    color: white;
     background-color: transparent;
-    text-decoration: none;
+    text-decoration: center;
     transition: 0.3s;
     font-weight: bold;
   }
@@ -79,3 +79,39 @@ body {
   .btn-criar-conta:hover {
     background-color: #00bfff;
   }
+
+  .ver-execucoes-container {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .btn-ver-execucoes {
+    background-color: #007bff; 
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-ver-execucoes:hover {
+    background-color: #0056b3;
+  }
+
+  .fala-planos {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #c0e8ff;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    line-height: 1.6;
+    background: linear-gradient(90deg, #1444ac 0%, #00bfff 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+  }
+  
+  

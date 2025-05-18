@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>TeceGym - Execuções {{ grupo|capitalize }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style-execucoes.css') }}">
+</head>
+<body>
+  
+  <h1>Execuções - {{ grupo|capitalize }}</h1>
+
+  {% if grupo == "peito" %}  
+    <section class="exercicio">
+      <h2>Supino Reto</h2>
+      <p>Execução correta do Supino reto...</p>
+      <img src="{{ url_for('static', filename='img/supino-reto.gif') }}" alt="Execução do Supino Reto">
+      <p class="descricao">
+        O supino reto é um dos exercícios mais clássicos da musculação, voltado principalmente para o desenvolvimento do peitoral maior, especialmente a parte média. Também ativa os tríceps e os deltoides anteriores (ombros). É realizado deitado em um banco horizontal, onde o praticante empurra uma barra ou halteres a partir da altura do peito em direção ao alto, estendendo os braços. Esse exercício é fundamental para ganhar força e massa muscular no tronco.
+      </p>
+    </section>
+    <section class="exercicio">
+      <h2>Supino Inclinado</h2>
+      <p>Execução correta do Supino Inclinado...</p>
+      <img src="{{ url_for('static', filename='img/supino-inclinado.gif') }}" alt="Execução do Supino Inclinado">
+      <p class="descricao">
+        O supino inclinado é um exercício de musculação focado no desenvolvimento da parte superior do músculo peitoral (peitoral maior), além de recrutar os ombros (deltoides anteriores) e tríceps. Ele é realizado em um banco inclinado a aproximadamente 30° a 45°, com o praticante empurrando a barra ou halteres para cima a partir da altura do peito. Esse exercício é bastante utilizado para melhorar a definição e o volume da parte superior do tórax.
+      </p>
+    </section>
+    <section class="exercicio">
+      <h2>Voador</h2>
+      <p>Execução correta do Voador...</p>
+      <img src="{{ url_for('static', filename='img/voador.gif') }}" alt="Execução do Voador">
+      <p class="descricao">
+        O voador (ou peck deck) é um exercício de musculação que foca no isolamento do músculo peitoral maior, especialmente na região interna do peito. É realizado em uma máquina específica, onde o praticante, sentado e com os braços abertos, aproxima os braços à frente do corpo, como se estivesse abraçando algo. Por ser um movimento guiado, reduz a necessidade de estabilização muscular, tornando-o ideal para iniciantes ou para dar ênfase ao peitoral com menor risco de lesões.
+      </p> 
+      </section>
+
+  {% elif grupo == "costas" %}
+    <section class="exercicio">
+      <h2>Pulldown</h2>
+      <p>Execução correta do pulldown...</p>
+      <img src="{{ url_for('static', filename='img/pulldown.gif') }}" alt="Execução do Pulldown">
+      <p class="descricao">
+        O pulldown é um exercício focado no desenvolvimento das costas, especialmente no latíssimo do dorso. Realizado em uma máquina, o praticante puxa uma barra para baixo, em direção ao peito, utilizando uma pegada pronada. Além do lat, também ativa os bíceps, romboides e trapézio. É excelente para aumentar a largura das costas e melhorar a definição da região superior das costas.
+      </p>
+    </section>
+    <section class="exercicio">
+      <h2>Remada baixa</h2>
+      <p>Execução correta da Remada baixa...</p>
+      <img src="{{ url_for('static', filename='img/remada-baixa.gif') }}" alt="Execução do Remada baixa">
+      <p class="descricao">
+        A remada baixa é um exercício focado no fortalecimento das costas, principalmente no latíssimo do dorso, romboides e trapézio. Realizado em uma máquina ou com corda, o movimento consiste em puxar a barra ou o cabo até o tronco, mantendo o corpo estável. Esse exercício ajuda a melhorar a espessura da parte média das costas e a postura, além de recrutar os bíceps como músculos auxiliares.
+      </p> 
+    </section>
+    <section class="exercicio">
+      <h2>Puxada alta</h2>
+      <p>Execução correta da Puxada alta...</p>
+      <img src="{{ url_for('static', filename='img/puxada-alta.gif') }}" alt="Execução do Puxada alta">
+      <p class="descricao">
+        A remada alta é um exercício que foca no desenvolvimento das costas e dos ombros. Realizado com barra ou cabo, o movimento consiste em puxar a barra em direção ao peito ou à clavícula, com os cotovelos mais elevados do que as mãos, criando um ângulo de puxada mais vertical. Esse exercício trabalha principalmente o trapézio superior e os deltoides, além de recrutar o latíssimo do dorso e os romboides de forma secundária.
+      </p> 
+    </section>
+
+  {% elif grupo == "quadriceps" %} 
+    <section class="exercicio">
+      <h2>Agachamento Hack</h2>
+      <p>Execução correta do Agachamento Hack...</p>
+      <img src="{{ url_for('static', filename='img/hack.gif') }}" alt="Execução do Agachamento Hack">
+      <p class="descricao">
+        O agachamento hack é realizado em uma máquina específica e foca no quadríceps, trabalhando também glúteos e músculos auxiliares. O praticante fica inclinado, empurrando a plataforma com os pés, enquanto a coluna permanece apoiada, permitindo maior foco nas pernas.
+      </p> 
+    </section>
+    <section class="exercicio">
+      <h2>Cadeira extensora</h2>
+      <p>Execução correta da Cadeira extensora ...</p>
+      <img src="{{ url_for('static', filename='img/cadeira-extensora.gif') }}" alt="Execução do Cadeira extensora ">
+      <p class="descricao">
+        A cadeira extensora é um exercício focado no fortalecimento dos quadríceps. Realizado em uma máquina, o praticante se senta e estende as pernas contra a resistência, isolando a musculatura da parte frontal da coxa. É um exercício eficaz para aumentar a força e a definição dos quadríceps.
+      </p> 
+    </section>
+    <section class="exercicio">
+      <h2>LegPress</h2>
+      <p>Execução correta do LegPress...</p>
+      <img src="{{ url_for('static', filename='img/legpress.gif') }}" alt="Execução do LegPress ">
+      <p class="descricao">
+        O leg press é um exercício para as pernas, que trabalha quadríceps, glúteos e isquiotibiais. Realizado em uma máquina, o praticante empurra uma plataforma com os pés, flexionando e estendendo as pernas. A intensidade pode ser ajustada com a carga, sendo uma ótima opção para quem busca aumentar a força e o volume muscular das pernas.
+      </p>
+    </section>
+
+    {% elif grupo == "posterior" %}
+    <section class="exercicio">
+      <h2>Cadeira flexora</h2>
+      <p>Execução correta da Cadeira flexora...</p>
+      <img src="{{ url_for('static', filename='img/cadeira-flexora.gif') }}" alt="Execução do Cadeira flexora ">
+      <p class="descricao">
+        A cadeira flexora é um exercício que foca no fortalecimento dos isquiotibiais (parte posterior da coxa). Na máquina, o praticante se senta e dobra as pernas para trás, contraindo os músculos da parte de trás da coxa. É um exercício excelente para equilibrar o desenvolvimento das pernas, complementando os exercícios focados nos quadríceps.
+      </p>
+    </section>
+    <section class="exercicio">
+      <h2>Stiff</h2>
+      <p>Execução correta do Stiff...</p>
+      <img src="{{ url_for('static', filename='img/stiff.gif') }}" alt="Execução do Stiff">
+      <p class="descricao">
+        O stiff é um exercício que trabalha os isquiotibiais, glúteos e a parte inferior das costas. Realizado com barra ou halteres, o movimento consiste em flexionar o tronco para frente mantendo as pernas quase retas, e retornando à posição inicial, ativando principalmente os músculos posteriores da coxa e glúteos. É excelente para melhorar a força e a definição dessas regiões.
+      </p>
+    </section>
+    <section class="exercicio">
+      <h2>Mesa flexora</h2>
+      <p>Execução correta da Mesa flexora...</p>
+      <img src="{{ url_for('static', filename='img/mesa-flexora.gif') }}" alt="Execução do Mesa flexora ">
+      <p class="descricao">
+        A mesa flexora é um exercício que foca nos isquiotibiais. Realizado em uma máquina, o praticante se deita de bruços e dobra as pernas para trás, contraindo a parte posterior da coxa. Esse exercício é eficaz para isolar os isquiotibiais e melhorar a força e o equilíbrio muscular das pernas.
+      </p>
+    </section>
+
+    {% elif grupo == "triceps" %}
+    <section class="exercicio">
+      <h2>Tríceps Francês</h2>
+      <p>Execução correta do Tríceps Francês...</p>
+      <img src="{{ url_for('static', filename='img/frances.gif') }}" alt="Execução do Tríceps Francês">
+      <p class="descricao">
+        O tríceps francês é um exercício focado no fortalecimento dos tríceps. Realizado com barra ou halteres, o movimento é feito deitado em um banco, com os braços estendidos acima da cabeça, e, em seguida, os cotovelos são flexionados para baixar o peso até a testa ou atrás da cabeça, antes de retornar à posição inicial. Esse exercício é excelente para isolar os tríceps e aumentar a definição da parte posterior dos braços.
+      </p>
+    </section>
+      <section class="exercicio">
+        <h2>Triceps Testa</h2>
+        <p>Execução correta do Triceps Testa...</p>
+        <img src="{{ url_for('static', filename='img/testa.gif') }}" alt="Execução do Triceps Testa">
+        <p class="descricao">
+          O tríceps testa é um exercício para trabalhar os tríceps, realizado deitado em um banco, com uma barra ou halteres. O praticante segura o peso acima da testa e, com os cotovelos fixos, desce o peso em direção à testa, flexionando os cotovelos, e depois estende os braços de volta à posição inicial. É eficaz para isolar a parte externa dos tríceps e melhorar a definição dos braços.
+        </p>
+      </section>
+      <section class="exercicio">
+        <h2>Tríceps Pulley</h2>
+        <p>Execução correta do Tríceps Pulley...</p>
+        <img src="{{ url_for('static', filename='img/pulley.gif') }}" alt="Execução do Tríceps Pulley">
+        <p class="descricao">
+          O tríceps pulley é um exercício focado no fortalecimento dos tríceps, realizado em uma máquina com cabo. O praticante usa uma corda ou barra anexada ao cabo e, a partir de uma posição em pé, puxa o peso para baixo, estendendo os braços e contraindo os tríceps. Esse movimento isola a parte posterior dos braços e é excelente para aumentar a definição e a força dos tríceps.
+        </p>
+      </section>
+
+      {% elif grupo == "biceps" %}
+      <section class="exercicio">
+        <h2>Rosca Scott</h2>
+        <p>Execução correta da Rosca Scott...</p>
+        <img src="{{ url_for('static', filename='img/rosca-scott.gif') }}" alt="Execução do Rosca Scott">
+        <p class="descricao">
+          A rosca Scott é um exercício isolado para os bíceps, realizado em um banco específico com apoio para os braços. O praticante usa uma barra ou halteres e, a partir de uma posição com os braços apoiados, faz o movimento de flexão do cotovelo, levantando o peso. Esse exercício isola os bíceps, ajudando a aumentar a força e a definição dessa região.
+        </p>
+      </section>
+      <section class="exercicio">
+        <h2>Rosca martelo</h2>
+        <p>Execução correta da Rosca martelo...</p>
+        <img src="{{ url_for('static', filename='img/rosca-martelo.gif') }}" alt="Execução do Rosca martelo">
+        <p class="descricao">
+          A rosca martelo é um exercício para os bíceps e antebraços, realizado com halteres. Ao contrário da rosca tradicional, onde a palma da mão fica voltada para cima, na rosca martelo as palmas das mãos ficam voltadas uma para a outra durante o movimento. Isso trabalha a porção braquial do braço e os músculos do antebraço, ajudando a melhorar a força e o tamanho dos braços de maneira equilibrada.
+        </p>
+      </section>
+      <section class="exercicio">
+        <h2>Rosca 45º</h2>
+        <p>Execução correta da Rosca 45º...</p>
+        <img src="{{ url_for('static', filename='img/45graus.gif') }}" alt="Execução do Rosca 45º">
+        <p class="descricao">
+          O exercício "Rosa 45 Graus" para bíceps é realizado com o corpo inclinado a 45 graus, geralmente usando halteres. Essa posição ajuda a isolar melhor os bíceps durante o movimento, promovendo maior ativação muscular e intensidade no treino.
+        </p>
+      </section>
+
+      {% elif grupo == "antebraço"%}
+      <section class="exercicio">
+        <h2>Rosca martelo</h2>
+        <p>Execução correta da Rosca martelo...</p>
+        <img src="{{ url_for('static', filename='img/rosca-martelo.gif') }}" alt="Execução do Rosca martelo">
+        <p class="descricao">
+          A rosca martelo é um exercício para os bíceps e antebraços, realizado com halteres. Ao contrário da rosca tradicional, onde a palma da mão fica voltada para cima, na rosca martelo as palmas das mãos ficam voltadas uma para a outra durante o movimento. Isso trabalha a porção braquial do braço e os músculos do antebraço, ajudando a melhorar a força e o tamanho dos braços de maneira equilibrada.
+        </p>
+      </section>
+      <section class="exercicio">
+        <h2>Rosca na polia pegada neutra</h2>
+        <p>Execução correta da Rosca na polia pegada neutra...</p>
+        <img src="{{ url_for('static', filename='img/rosca-polia.gif') }}" alt="Execução do Rosca na polia pegada neutra">
+        <p class="descricao">
+          A rosca martelo na polia com pegada neutra trabalha os bíceps e antebraços. Usando uma polia baixa e uma pegada neutra (palmas voltadas uma para a outra), o exercício promove controle e definição muscular, com menor risco de lesões.
+        </p>
+      </section>
+      <a href="{{ url_for('plano_treino') }}" class="btn-voltar">Ver outras execuções</a>
+
+      {% elif grupo == "panturrilha" %}
+      <section class="exercicio">
+        <h2>Gêmeos em pé</h2>
+        <p>Execução correta do Gêmeos em pé...</p>
+        <img src="{{ url_for('static', filename='img/gemeos-pe.gif') }}" alt="Execução do Gêmeos em pé">
+        <p class="descricao">
+          O exercício gêmeos em pé foca no trabalho dos músculos da panturrilha. Ele é realizado com o corpo ereto, elevando-se nas pontas dos pés, o que ativa principalmente os músculos gastrocnêmio e sóleo. Pode ser feito com o peso corporal ou com cargas adicionais, como halteres ou na máquina específica.
+        </p>
+      </section>
+      <section class="exercicio">
+        <h2>Gêmeos sentado</h2>
+        <p>Execução correta do Gêmeos sentado...</p>
+        <img src="{{ url_for('static', filename='img/gemeos-sentado.gif') }}" alt="Execução do Gêmeos sentado">
+        <p class="descricao">
+          O exercício gêmeos sentado foca no músculo sóleo da panturrilha. Ele é realizado sentado, com os pés apoiados em uma plataforma e as pernas flexionadas. Ao elevar os calcanhares, o movimento trabalha mais a parte inferior da panturrilha, proporcionando um estímulo diferente do exercício de gêmeos em pé. Pode ser feito com o peso corporal ou utilizando cargas na máquina específica.
+        </p>
+      </section>
+
+      {% elif grupo == "abdomen" %}
+      <section class="exercicio">
+        <h2>Prancha</h2>
+        <p>Execução correta da Prancha...</p>
+        <img src="{{ url_for('static', filename='img/prancha.jpg') }}" alt="Execução do Prancha">
+        <p class="descricao">
+          A prancha é um exercício isométrico que trabalha o core, envolvendo principalmente os músculos abdominais, lombares, ombros e glúteos. Para realizá-la, a pessoa fica em posição de flexão de braço, com o corpo reto e apoiado nos antebraços e nas pontas dos pés. O objetivo é manter a posição por um determinado tempo, desafiando a estabilidade e resistência muscular.
+        </p>
+      </section>
+      <section class="exercicio">
+        <h2>Abdominal</h2>
+        <p>Execução correta do Abdominal...</p>
+        <img src="{{ url_for('static', filename='img/abdominal.gif') }}" alt="Execução do Abdominal">
+        <p class="descricao">
+          O abdominal tradicional é um exercício que foca nos músculos abdominais. Para realizá-lo, deite-se de costas, com os joelhos flexionados e os pés no chão. Coloque as mãos atrás da cabeça ou cruzadas sobre o peito e, em seguida, eleve a parte superior do tronco em direção aos joelhos, contraindo o abdômen. Depois, volte lentamente à posição inicial.
+        </p>
+      </section>
+      <section class="exercicio">
+        <h2>Abdominal Bike</h2>
+        <p>Execução correta do Abdominal Bike...</p>
+        <img src="{{ url_for('static', filename='img/abdominal-bike.gif') }}" alt="Execução do Abdominal Bike">
+        <p class="descricao">
+          O abdominal bike é um exercício que trabalha os músculos abdominais oblíquos e o reto abdominal. Para realizá-lo, deite-se de costas com as mãos atrás da cabeça e as pernas elevadas, simulando o movimento de pedalar. Alterne levando o cotovelo direito em direção ao joelho esquerdo enquanto estica a perna direita, e depois inverta o movimento. O exercício exige controle e ativa várias regiões do core.
+        </p>
+      </section>
+
+      {% elif grupo == "deltoide" %}
+      <section class="exercicio">
+        <h2>Desenvolvimento</h2>
+        <p>Execução correta do Desenvolvimento...</p>
+        <img src="{{ url_for('static', filename='img/desenvolvimento.gif') }}" alt="Execução do Desenvolvimento">
+        <p class="descricao">
+          O desenvolvimento de ombro é um exercício que foca no fortalecimento do músculo deltoide, localizado no ombro. Pode ser feito de pé ou sentado, usando halteres ou barra. Para executá-lo, segure os pesos na altura dos ombros, com as palmas das mãos voltadas para a frente. Em seguida, empurre os pesos para cima, estendendo os braços completamente, e depois retorne à posição inicial, controlando o movimento. Este exercício trabalha especialmente a parte frontal e média do deltoide.
+        </p>
+      </section>
+      <section class="exercicio">
+        <h2>Voador Invertido</h2>
+        <p>Execução correta do Voador Invertido...</p>
+        <img src="{{ url_for('static', filename='img/voador-invertido.gif') }}" alt="Execução do Voador Invertido">
+        <p class="descricao">
+          O voador invertido é um exercício que foca nos músculos das costas, especialmente os deltoides posteriores e a parte superior das costas. Ele é realizado em uma máquina de peck deck, mas com a posição invertida. Ao invés de empurrar as alças para frente, você as puxa para trás, com os braços abertos, contraindo as escápulas. Esse movimento ajuda a melhorar a postura e a fortalecer a musculatura das costas.
+        </p>
+      </section>
+      <section class="exercicio">
+        <h2>Elevação Lateral</h2>
+        <p>Execução correta da Elevação Lateral...</p>
+        <img src="{{ url_for('static', filename='img/elevação-lateral.gif') }}" alt="Execução do Elevação Lateral">
+        <p class="descricao">
+          A elevação lateral é um exercício que trabalha principalmente a parte média do músculo deltoide. Para executá-la, segure um haltere em cada mão, com os braços ao lado do corpo. Em seguida, levante os halteres lateralmente até a altura dos ombros, mantendo os cotovelos ligeiramente flexionados. Depois, controle o movimento ao retornar à posição inicial. Esse exercício ajuda a desenvolver a largura dos ombros.
+        </p>
+      </section>
+      
+  {% else %}
+    <p>Grupo muscular não reconhecido.</p>
+  {% endif %}
+
+</body>
+</html>
