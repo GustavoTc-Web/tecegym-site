@@ -1,130 +1,143 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Fundo geral da página */
 body {
-    margin: 0;
-    padding: 40px; 
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #1a1625; 
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; 
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom right, #2a223a, #1e1b29); 
-    padding: 50px 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); 
-    max-width: 700px;
-    width: 100%;
-  }
-  
-  .texto h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    color: #1410df; 
-    margin-bottom: 20px;
-    text-align: center;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1a1625;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  min-height: 100vh;
+  animation: fadeIn 0.8s ease-in-out;
+}
 
-  .texto h3 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-    text-align: center;
-  }
- 
-  .texto ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-  
-  /* Cada item da lista */
-  .texto ul li {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-  }
+/* Fade-in na entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  .texto a {
-    color: #1444ac; /* azul escuro */
-    font-weight: bold;
-    text-decoration: underline;
-    transition: 0.3s;
-  }
-  
-  /* Hover nos links */
-  .texto a:hover {
-    color: #0e3194;
-  }
-  
-  /* Botão voltar para login */
-  .btn-criar-conta {
-    display: block;
-    margin: 20px auto;
-    margin-top: 15px;
-    padding: 10px 20px;
-    border: 2px solid #1444ac;
-    border-radius: 8px;
-    color: #1444ac;
-    background-color: transparent;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    text-align: center;
-  }
-  
-  /* Hover no botão */
-  .btn-criar-conta:hover {
-    background-color: #1444ac;
-    color: white;
-  }
-  
-  /* Imagem do visitante */
-  .ilustra02 {
-    display: block;
-    margin: 25px auto;
-    width: 160px;
-    height: auto;
-    animation: flutuar 3s ease-in-out infinite; /* animação leve */
-  }
-  
-  /* Animação flutuar */
-  @keyframes flutuar {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
-  }
-  
-  /* Parágrafos abaixo da lista */
-  .container p {
-    font-size: 1.1rem;
-    text-align: center;
-    margin-top: 10px;
-  }
+.container {
+  background: linear-gradient(to bottom right, #2a223a, #1e1b29);
+  padding: 50px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
 
-  .vantagens {
-    margin-top: 20px;
-    background-color: #2a223a;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    color: #ccc;
-    max-width: 400px;
-  }
-  
-  .vantagens ul {
-    list-style-type: '✨ ';
-    padding-left: 20px;
-  }
-  
-  .vantagens li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-  }
-  
-  
+/* Título principal */
+.texto h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.6rem;
+  color: #274baf;
+  margin-bottom: 20px;
+}
+
+/* Subtítulo */
+.texto h3 {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Imagem animada */
+.ilustra02 {
+  display: block;
+  margin: 25px auto;
+  width: 180px;
+  height: auto;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Lista de opções */
+.texto ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.texto ul li {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.texto a {
+  color: #274baf;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.texto a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #274baf;
+}
+
+/* Botão login */
+.btn-criar-conta {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 12px 30px;
+  border: 2px solid #274baf;
+  border-radius: 10px;
+  color: #274baf;
+  background: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-criar-conta:hover {
+  background: #274baf;
+  color: #1a1625;
+  box-shadow: 0 0 12px #00aaff;
+}
+
+/* Parágrafos */
+.container p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+/* Vantagens box */
+.vantagens {
+  margin-top: 25px;
+  background-color: #2e2641;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+  color: #eee;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vantagens ul {
+  list-style-type: '✅ ';
+  padding-left: 25px;
+}
+
+.vantagens li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}

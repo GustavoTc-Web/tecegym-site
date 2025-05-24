@@ -97,7 +97,7 @@ body {
   cursor: pointer;
   transition: 0.3s;
   letter-spacing: 2px;
-}
+} 
 
 .login-box button:hover {
   background-color: #0e3194;

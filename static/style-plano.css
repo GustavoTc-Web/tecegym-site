@@ -113,5 +113,49 @@ body {
     -webkit-text-fill-color: transparent;
     font-weight: 600;
   }
+
+  .container-fala {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+    color: #c0e8ff;
+    margin: 40px 0 20px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .btn-criar-conta {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: 2px solid #00bfff;
+    border-radius: 12px;
+    color: #00bfff;
+    background: transparent;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 191, 255, 0.25);
+    transition: background-color 0.7s ease, color 0.7s ease, box-shadow 0.7s ease, transform 0.7s ease;
+  }
+  
+  .btn-criar-conta:hover {
+    background: #00bfff;
+    color: #1a1625;
+    box-shadow: 0 0 8px #00bfff;
+    transform: scale(1.02);
+  }
+
+
+  
+  
+  
+  
+  
   
   
